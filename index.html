@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* General styling for the body */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Set a light background color */
+        }
+
+        /* Styling for the main container */
+        .container {
+            text-align: center;
+        }
+
+        /* Styling for the color box */
+        .color-box {
+            width: 300px;
+            height: 50px;
+            margin: 20px 0;
+            font-size: 16px;
+            background-color: black; /* Set default color to black */
+            color: white; /* Set text color to white for better visibility */
+            border: none; /* Remove border for a cleaner look */
+        }
+
+        /* Styling for the button container */
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        /* Styling for the buttons */
+        button {
+            padding: 15px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Add unique styles for each button */
+        #redButton { background-color: #ff5252; color: white; }
+        #greenButton { background-color: #66bb6a; color: white; }
+        #blueButton { background-color: #42a5f5; color: white; }
+        #yellowButton { background-color: #ffd600; color: black; }
+        #purpleButton { background-color: #9c27b0; color: white; }
+        #orangeButton { background-color: #ff7043; color: white; }
+        #pinkButton { background-color: #ec407a; color: white; }
+        #tealButton { background-color: #00897b; color: white; }
+        #brownButton { background-color: #795548; color: white; }
+    </style>
+    <title>Color Changer</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Input box to display the selected color -->
+        <input type="text" id="colorBox" class="color-box" value="Black" readonly>
+        
+        <!-- Container for color buttons -->
+        <div class="button-container">
+            <!-- Button for Red color -->
+            <button id="redButton" onclick="changeColor('#ff5252')">Red-#ff5252</button>
+            <!-- Button for Green color -->
+            <button id="greenButton" onclick="changeColor('#66bb6a')">Green-#66bb6a</button>
+            <!-- Button for Blue color -->
+            <button id="blueButton" onclick="changeColor('#42a5f5')">Blue-#42a5f5</button>
+            <!-- Button for Yellow color -->
+            <button id="yellowButton" onclick="changeColor('#ffd600')">Yellow-#ffd600</button>
+            <!-- Button for Purple color -->
+            <button id="purpleButton" onclick="changeColor('#9c27b0')">Purple-#9c27b0</button>
+            <!-- Button for Orange color -->
+            <button id="orangeButton" onclick="changeColor('#ff7043')">Orange-#ff7043</button>
+            <!-- Button for Pink color -->
+            <button id="pinkButton" onclick="changeColor('#ec407a')">Pink-#ec407a</button>
+            <!-- Button for Teal color -->
+            <button id="tealButton" onclick="changeColor('#00897b')">Teal-#00897b</button>
+            <!-- Button for Brown color -->
+            <button id="brownButton" onclick="changeColor('#795548')">Brown-#795548</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to change the color of the color box
+        function changeColor(color) {
+            const colorBox = document.getElementById('colorBox');
+            colorBox.style.backgroundColor = color;
+            colorBox.value = color === 'Default' ? 'Black' : color;
+        }
+    </script>
+</body>
+</html>
